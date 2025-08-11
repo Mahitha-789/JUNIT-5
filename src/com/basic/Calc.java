@@ -6,5 +6,10 @@ public class Calc
 	{
 		return num1/num2;
 	}
+	public int multiply(int i,int j)
+	{
+		int result= i*j;
+		return result;
+	}
 
 }
