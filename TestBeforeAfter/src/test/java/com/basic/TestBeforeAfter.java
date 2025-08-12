@@ -3,10 +3,17 @@ package com.basic;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 class TestBeforeAfter 
 {
+	@BeforeAll
+	static void beforeAll()
+	{
+		System.out.println("Before all test");
+	}
 	Shapes shape;
 	
 	@BeforeEach
@@ -32,5 +39,10 @@ class TestBeforeAfter
 	void destroy()
 	{
 		System.out.println("Actual test clean up");
+	}
+	@AfterAll
+	static void afterAll()
+	{
+		System.out.println("After all test");
 	}
 }
